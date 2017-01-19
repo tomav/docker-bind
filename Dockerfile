@@ -1,5 +1,6 @@
 FROM ubuntu:14.04
 MAINTAINER Thomas VIAL
+ADD start-bind.sh /usr/local/bin/start-bind.sh
 RUN apt-get update -q && \
   apt-get -y upgrade && \
   DEBIAN_FRONTEND=noninteractive apt-get -y install bind9 rsyslog dnsutils && \
